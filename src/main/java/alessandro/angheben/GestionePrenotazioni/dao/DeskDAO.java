@@ -13,8 +13,8 @@ import java.util.List;
 @Repository
 public interface DeskDAO extends JpaRepository<Desk,Long> {
 
-    @Query("SELECT d FROM Desk d WHERE d NOT IN (SELECT r.desk FROM Reservation r WHERE r.reservationDate = :reservationDate)")
-    List<Desk> findFreeDesksByReservationDate( LocalDate reservationDate);
+//    @Query("SELECT d FROM Desk d WHERE d NOT IN (SELECT r.desk FROM Reservation r WHERE r.reservationDate = :reservationDate && )")
+//    List<Desk> findFreeDesksByReservationDate( LocalDate reservationDate);
     List<Desk> findByTypeDesk(TypeDesk typeDesk);
 
 

@@ -19,9 +19,6 @@ public class DeskService {
         System.out.println("Congratulazioni, DESK salvato con successo !");
     }
 
-    public List<Desk> findFreeDesksByReservationDate(LocalDate reservationDate){
-        return deskDAO.findFreeDesksByReservationDate(reservationDate);
-    }
 
     public List<Desk> findByTypeDesk(TypeDesk typeDesk){
         return deskDAO.findByTypeDesk(typeDesk);
