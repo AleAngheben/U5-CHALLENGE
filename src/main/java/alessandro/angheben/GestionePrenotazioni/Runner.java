@@ -77,9 +77,14 @@ public class Runner implements CommandLineRunner {
         Reservation reservationOne = new Reservation(userOne,deskMilanOne, LocalDate.now());
         Reservation reservationTwo = new Reservation(userTwo,deskRomeOne, LocalDate.now());
         Reservation reservationThree = new Reservation(userThree,deskMilanTwo, LocalDate.now());
+
+        // Se la faccio mi dice che ho già una prenotazione per questo utente in questa data (giustamente)
+        // Reservation reservationTest = new Reservation(userThree,deskMilanThree, LocalDate.now());
+
         reservationService.save(reservationOne);
         reservationService.save(reservationTwo);
         reservationService.save(reservationThree);
+        //reservationService.save(reservationTest);
 
         System.out.println("Helloooooooooooooooooooooooooo");
     }
